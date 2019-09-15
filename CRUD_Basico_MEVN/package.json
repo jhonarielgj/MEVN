@@ -1,0 +1,22 @@
+{
+  "name": "crud_basico_mevn",
+  "version": "1.0.0",
+  "description": "Crud básico con MEVN",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [
+    "MEVN",
+    "CRUD"
+  ],
+  "author": "JAGJ",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.2"
+  }
+}
