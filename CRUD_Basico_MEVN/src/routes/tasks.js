@@ -3,17 +3,18 @@ const router = express.Router();
 const Task = require('../models/task');
 
 // Como se definió /tasks como raíz de las rutas de tasks.js hay que cambiar la ruta
+// de '/tasks' a '/'
 // router.get('/tasks', (req, res) => {
-//router.get('/', (req, res) => {
+// router.get('/', (req, res) => {
 // Primea forma larga
-    /*Task.find( (data) => {
-        res.json(data);
-    });*/
+/*Task.find( (data) => {
+    res.json(data);
+});*/
 // Segunda forma con promesas
-    /*Task.find()
-        .then (data => {
-            res.jason(data);
-        });   
+/*Task.find()
+    .then (data => {
+        res.jason(data);
+    });   
 });*/
 
 //Tercera forma y más moderna con async await. Escribir de forma sincrona acciones asincronas
@@ -23,10 +24,13 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+    console.log('req.body: ', req.body);
+    console.log('Request Type: ', req.method);
     const task = new Task(req.body);
-    await task.save();
+    console.log('task: ', task);
+    // await task.save();
     res.json({
-        status: 'Tarea guardada'
+        status: 'Tarea guardada exitosamente!'
     });
 });
 

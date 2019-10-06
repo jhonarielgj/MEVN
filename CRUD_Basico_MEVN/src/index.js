@@ -19,13 +19,13 @@ const puerto = app.get('puerto');
 // Devuelve por ej: GET / 304 25.200 ms - - Petición 'Get' desde ruta '/' devuelve
 // código '304' y tardó '25 ms'
 app.use(morgan('dev'));
+
 // Para entener información de tipo json
 app.use(express.json());
 
 // Routes
 // Define /tasks como la raiz de las rutas de tasks.js
 app.use('/tasks', tasks);
-
 
 // Static files
 // __dirname es una constante que tiene la ruta completa del SO del proyecto
